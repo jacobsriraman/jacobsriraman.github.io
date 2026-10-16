@@ -1,0 +1,156 @@
+\documentclass[10pt,letterpaper]{article}
+
+% ==================== Packages ====================
+\usepackage[margin=0.78in]{geometry}
+\usepackage[T1]{fontenc}
+\usepackage{lmodern}
+\usepackage{microtype}
+\usepackage{tabularx}
+\usepackage{titlesec}
+\usepackage{enumitem}
+\usepackage[hidelinks]{hyperref}
+
+% ==================== Page and Typography ====================
+\pagestyle{empty}
+\setlength{\parindent}{0pt}
+\setlength{\parskip}{0pt}
+\setlength{\emergencystretch}{2em}
+\urlstyle{same}
+
+\titleformat{\section}
+  {\normalsize\bfseries}
+  {}{0pt}{}
+  [\vspace{2pt}\titlerule]
+\titlespacing*{\section}{0pt}{14pt}{7pt}
+
+\setlist[itemize]{leftmargin=1.4em,topsep=2pt,itemsep=2pt,parsep=0pt}
+
+% ==================== Custom Commands ====================
+% A heading on the left and dates/location on the right.
+\newcommand{\cventry}[4]{%
+  \begin{tabularx}{\textwidth}{@{}X r@{}}
+    \textbf{#1} & #2 \\
+    #3 & \textit{#4}
+  \end{tabularx}\par\vspace{5pt}%
+}
+
+% Single title/date line, with venue or institution below.
+\newcommand{\presentation}[3]{%
+  \begin{tabularx}{\textwidth}{@{}X r@{}}
+    \textbf{#1} & \textit{#2}
+  \end{tabularx}\par
+  #3\par\vspace{7pt}%
+}
+
+% Bibliographic entries with hanging indentation.
+\newcommand{\publication}[1]{%
+  \par\begingroup\hangindent=1.5em\hangafter=1
+  #1\par\endgroup\vspace{7pt}%
+}
+
+\begin{document}
+
+% ==================== Header ====================
+\begin{centering}
+{\LARGE\bfseries Jacob Sriraman}\par\vspace{4pt}
+Ph.D. Student in Computer Science \quad | \quad Montana State University
+\quad | \quad Bozeman, Montana\par\vspace{4pt}
+\end{centering}
+
+% ==================== Education ====================
+\section*{Education}
+\cventry{Montana State University}{Bozeman, MT}
+  {Ph.D. in Computer Science; Advisor: Brittany Terese Fasy}
+  {August 2025--Present}
+\cventry{Montana Technological University}{Butte, MT}
+  {B.S. in Mathematics (Statistics Option); B.S. in Data Science}
+  {August 2022--May 2025}
+ GPA: 3.91
+
+% ==================== Research Interests ====================
+\section*{Research Interests}
+Topological data analysis, computational topology, shape reconstruction and representation.
+
+% ==================== Publications ====================
+\section*{Publications and Accepted Work}
+\publication{\textbf{Jacob Sriraman}, Eli Barton, Brittany Terese Fasy, David L. Millman,
+Brenden Mumey, Nate Rengo, Braeden Sopp, Vasishta Tumuluri, and Binhai Zhu.
+\emph{Parametric Shortest Paths in a Linearly Interpolated Graph}.
+Accepted to SoCG Young Researchers Forum, 2026.}
+
+\publication{Joshua Dorrington, Sushovan Majhi, Atish Mitra,
+James Moukheiber, Demi Qin, \textbf{Jacob Sriraman}, and Kristian Strommen.
+\emph{Topology of the Polar Vortex and Montana Weather}.
+Accepted to ATMCS, 2025. \href{https://arxiv.org/abs/2503.20743}{arXiv:2503.20743}.}
+
+% ==================== Talks ====================
+\section*{Conference Talks}
+\presentation{Tensor Computation of Euler Characteristic Functions and
+Transforms}{November 2026}{SIAM MDS, Salt Lake City, UT}
+\presentation{Parametric Shortest Paths in Linearly Interpolated Graphs}
+  {July 2026}
+  {SoCG Young Researchers Forum, Rutgers University, New Brunswick, NJ}
+\presentation{Topological Time Series Analysis of the Polar Vortex}
+  {January 2026}
+  {JMM, AMS Special Session on Topological Data
+  Analysis for Nonlinear Dynamics, Washington, D.C}
+
+% ==================== Posters ====================
+\section*{Poster Presentations}
+\presentation{Topology of the Polar Vortex and Montana Weather}
+  {July 2025}{ATMCS, Montana State University}
+\presentation{The Topology of Robotic Motion Planning}
+  {April 2025}{Techxpo, Montana Technological University}
+\presentation{Chain-Up Delay Estimation for Interstate 5 in Northern California}
+  {April 2025}{Techxpo, Montana Technological University}
+
+% ==================== Research and Teaching ====================
+\section*{Research and Teaching Appointments}
+\cventry{Montana State University}{Bozeman, MT}
+  {Research Assistant, Computational Topology and Geometry}
+  {Summer 2025; Spring 2026--Present}
+\cventry{Montana State University}{Bozeman, MT}
+  {Teaching Assistant, CSCI 132: Basic Data Structures and Algorithms}{Fall 2025}
+\cventry{Montana Technological University}{Butte, MT}
+  {Data Science Research Assistant}{April 2024--May 2025}
+
+% ==================== Other Professional Experience ====================
+\section*{Other Professional Experience}
+\cventry{Montana Technological University, Information Technology}{Butte, MT}
+  {Technical Support Specialist}{August 2024--May 2025}
+\cventry{Sarinjo Technologies LLC}{Missoula, MT / Remote}
+  {Machine Learning / Deep Learning Research Intern}{May--August 2024}
+
+% ==================== Honors ====================
+\section*{Honors and Awards}
+\begin{tabularx}{\textwidth}{@{}X r@{}}
+  Montana Tech Outstanding Student Award, Data Science & \textit{May 2025} \\
+  Montana Tech Outstanding Student Award, Mathematics & \textit{May 2025} \\
+  Montana Tech Oredigger Elite Scholar & \textit{2022--2025}
+\end{tabularx}
+
+% ==================== Service ====================
+\section*{Outreach and Service}
+\presentation{Outreach Facilitator, High School
+Shadow Day}{October 2026}{Montana State University}
+\presentation{Event Organizer, Montana Science Olympiad -- Codebusters Competition}
+  {February 2026--Present}{Montana Science Olympiad}
+\presentation{Guest Speaker, Sentinel High School}
+  {December 2025}{Sentinel High School}
+\presentation{Invited Speaker, Data Science Day for High Schoolers}
+  {October 2025}{Montana Technological University}
+
+% ==================== Software Contributions ====================
+\section*{Software Contributions}
+\textbf{TDAtaframe}\par
+\emph{TDA brought to dataframes}\par\vspace{6pt}
+\textbf{pyECT}\par
+\emph{Fast, general, GPU-ready Euler Characteristic Functions and Transforms in PyTorch}
+
+% ==================== Technical Skills ====================
+\section*{Technical Skills}
+\textbf{Programming and Tools:} Python, Java, Rust,
+\LaTeX, Docker, Git\par\vspace{2pt}
+\textbf{Machine Learning:} PyTorch, TensorFlow
+
+\end{document}

@@ -1,0 +1,34 @@
+# Your homepage copy lives here. Markdown is supported in text fields.
+# TODOs are comments, so they never appear on the public site.
+
+eyebrow: Computer science · Montana State University
+
+# TODO: Replace this with 2–3 sentences in your own voice: what interests you,
+# what you spend time thinking about, and why someone might want to talk to you.
+intro: >-
+  I'm a computer science PhD student working on computational topology
+  and topological data analysis.
+about: >-
+  I'm part of the [CompTaG lab](https://comptag.github.io/) at
+  Montana State University, advised by [Brittany Terese Fasy](https://fasy.us/).
+  My interests include shape reconstruction and representation.
+
+# TODO (optional): Add one sentence about a question or project on your mind.
+# Leave blank to hide it. Avoid details that will immediately go out of date.
+currently: ""
+
+# News is in _data/news.yml. Add a short update there whenever you have one.
+
+# TODO (optional): Add a portrait under images/ and enter its path here.
+# Leave blank for the text-only layout.
+portrait: ""
+portrait_alt: Portrait of Jacob Sriraman
+
+# TODO: Add a few lines about you beyond your research: interests, places,
+# things you make, or what you do for fun. This section stays hidden until filled.
+personal_heading: Away from the desk
+personal: ""
+
+# TODO (optional): Add a PDF at files/cv.pdf, then set cv_url to /files/cv.pdf.
+# It becomes a quiet footer link, without creating another tab or CV page.
+cv_url: ""

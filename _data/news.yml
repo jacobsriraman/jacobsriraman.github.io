@@ -1,0 +1,21 @@
+# Add a short update whenever you have something to share. Markdown links work.
+# Use a quoted YYYY-MM date; the homepage shows the five newest entries first.
+# TODO: Review these starting updates, drawn from your CV, and make them yours.
+# Updates can be small: a new project, a talk, teaching, or something you learned.
+# Example:
+# - date: "2026-10"
+#   text: >-
+#     A sentence about what you've been up to, with an optional [link](https://example.com).
+
+- date: "2026-07"
+  text: >-
+    I presented work on parametric shortest paths in linearly interpolated
+    graphs at the SoCG Young Researchers Forum.
+- date: "2026-01"
+  text: >-
+    I gave a talk on topological time series analysis of the polar vortex
+    at the Joint Mathematics Meetings.
+- date: "2025-08"
+  text: >-
+    I started my PhD in computer science at Montana State University,
+    working with Brittany Terese Fasy in the CompTaG lab.

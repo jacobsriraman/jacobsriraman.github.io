@@ -1,0 +1,36 @@
+<!doctype html>
+<html lang="{{ site.locale | default: 'en-US' }}">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>{% unless page.url == '/' %}{{ page.title | escape }} · {% endunless %}{{ site.title | escape }}</title>
+    <meta name="description" content="{{ page.description | default: site.description | escape }}">
+    <link rel="canonical" href="{{ page.url | absolute_url }}">
+    <meta property="og:type" content="website">
+    <meta property="og:title" content="{{ site.title | escape }}">
+    <meta property="og:description" content="{{ page.description | default: site.description | escape }}">
+    <meta property="og:url" content="{{ page.url | absolute_url }}">
+    <meta name="theme-color" content="#f7f6f2">
+    <link rel="icon" href="{{ '/images/monogram.svg' | relative_url }}" type="image/svg+xml">
+    <link rel="stylesheet" href="{{ '/assets/css/personal.css' | relative_url }}">
+  </head>
+  <body>
+    <a class="skip-link" href="#main">Skip to content</a>
+    <div class="site-shell">
+      <header class="site-header">
+        <a class="home-link" href="{{ '/' | relative_url }}" aria-label="Jacob Sriraman, home">JS<span aria-hidden="true">.</span></a>
+        <nav aria-label="Main navigation">
+          {% if site.data.news.size > 0 %}<a href="{{ '/#news' | relative_url }}">News</a>{% endif %}
+          <a href="{{ '/#contact' | relative_url }}">Contact</a>
+        </nav>
+      </header>
+      <main id="main" tabindex="-1">{{ content }}</main>
+      <footer class="site-footer">
+        <span>{{ site.author.name | escape }} <span aria-hidden="true">/</span> Bozeman, Montana</span>
+        {% if site.data.home.cv_url != blank and site.data.home.cv_url != '' %}
+          <a href="{{ site.data.home.cv_url | relative_url }}">CV (PDF)</a>
+        {% endif %}
+      </footer>
+    </div>
+  </body>
+</html>
